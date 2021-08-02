@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NM_NZ204_LOL_PUBLICATION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" xsi:noNamespaceSchemaLocation="CI LL_Ed 13-21_28-06-21.xsd">
+  <TITLE>Chatham Islands Light List_NTM Ed 13 28-06-21</TITLE>
+  <PUBLISHED_FILENAME>N:\Publications\Light Lists\Automated\XML\CI LL_Ed 13-21_28-06-21.xml</PUBLISHED_FILENAME>
+  <PUBLISH_DATE>2021-06-25</PUBLISH_DATE>
+  <EDITION>13</EDITION>
+  <SECTION_LIST>
+    <SECTION_LIST_ITEM>
+      <NM_NZ204_LIGHTLIST_GROUP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <NAME>New Section</NAME>
+        <SECTION_CONTENT_LIST>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4541</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881937</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881941</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881939</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881938</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881956</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881940</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4541</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Point Durham</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>44 00.63</LATITUDE>
+                <LONGITUDE>176 40.51</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Fl W 10s</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>9</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>38</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Metal tower<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">4</p></DESC_STRUCT_HEIGHT_ENG>
+              <OBSERVATION_ENG> W (Obscured) 006.6°- 008.3° (1.7°) <br/> W 008.3°-227° (218.7°) <br/> W (Obscured) 227°- 237° (10°) <br/> W (Obscured) 330.2°- 350.6° (20.4°) <br/> W 350.6°-006.6° (16°) <br/>Aluminium. </OBSERVATION_ENG>
+              <NM_REMARKS>
+                <i>fl 1, ec 9</i>
+                <br/>
+              </NM_REMARKS>
+              <NM_LIGHTS_OBMNZ>Yes</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4543</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881957</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881958</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4543</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Point Weeding</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 56.60</LATITUDE>
+                <LONGITUDE>176 34.31</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Fl W 5s</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>7</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>60</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Metal pile beacon<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">3</p></DESC_STRUCT_HEIGHT_ENG>
+              <OBSERVATION_ENG><span> Lights also shown at Point Hanson Jetty 0.55M E.</span>  Column</OBSERVATION_ENG>
+              <NM_REMARKS>
+                <i>fl 0.5, ec 4.5</i>
+                <br/>
+              </NM_REMARKS>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4544</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881963</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881961</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881960</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881962</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4544</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Waitangi Wharf Sector Light</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 57.20</LATITUDE>
+                <LONGITUDE>176 33.51</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>F WRG</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>8</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>15</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Brown  wooden pole<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">15</p></DESC_STRUCT_HEIGHT_ENG>
+              <OBSERVATION_ENG> R 163.5°-183.5° (20°) <br/> W 183.5°-195.5° (12°) <br/> G 195.5°-215.5° (20°) <br/></OBSERVATION_ENG>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4544.5</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881971</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881970</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881976</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4544.5</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Waitangi Wharf Lead  Ldg Lts 259° 40'. Front</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 56.78</LATITUDE>
+                <LONGITUDE>176 33.60</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>F Y</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>10</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>8</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>White  concrete pole<br/>Yellow topmark, triangle, point up<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">8</p></DESC_STRUCT_HEIGHT_ENG>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4544.51</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881967</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881969</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881968</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4544.51</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Waitangi Wharf Lead Ldg Lts Rear</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 56.79</LATITUDE>
+                <LONGITUDE>176 33.70</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>F Y</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>10</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>14</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Brown  wooden, concrete pole<br/>Yellow topmark, triangle, point down<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">14</p></DESC_STRUCT_HEIGHT_ENG>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4544.6</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881965</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881964</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881966</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4544.6</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Waitangi Wharf Breakwater Trunk</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 56.72</LATITUDE>
+                <LONGITUDE>176 33.58</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Fl W 5s</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>3</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>6</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Brown  wooden pole<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">2</p></DESC_STRUCT_HEIGHT_ENG>
+              <OBSERVATION_ENG> W 212°-303° (91°) <br/> W (Obscured) 303°- 212° (269°) </OBSERVATION_ENG>
+              <NM_REMARKS>
+                <i>fl 2, ec 3</i>
+                <br/>
+              </NM_REMARKS>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4545</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881959</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881955</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4545</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Point Somes</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 50.36</LATITUDE>
+                <LONGITUDE>176 52.58</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Fl(4)W 15s</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>9</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>39</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Metal tower<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">4</p></DESC_STRUCT_HEIGHT_ENG>
+              <OBSERVATION_ENG><br/>Aluminium. </OBSERVATION_ENG>
+              <NM_REMARKS>
+                <i>(fl 0.5, ec 1.5) x 3, </i>
+                <i>fl 0.5, ec 8.5</i>
+                <br/>
+              </NM_REMARKS>
+              <NM_LIGHTS_OBMNZ>Yes</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4547</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881972</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881973</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4547</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Kaingaroa (Pukerakei)</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 44.13</LATITUDE>
+                <LONGITUDE>176 14.43</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Fl(3)W 20s</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>9</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>60</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Metal tower<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">4</p></DESC_STRUCT_HEIGHT_ENG>
+              <OBSERVATION_ENG><br/>Aluminium. </OBSERVATION_ENG>
+              <NM_REMARKS>
+                <i>(fl 1, ec 1) x 2, </i>
+                <i>fl 1, ec 15</i>
+                <br/>
+              </NM_REMARKS>
+              <NM_LIGHTS_OBMNZ>Yes</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4547.4</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881950</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881977</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881954</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4547.4</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Kaingaroa  Ldg Lts  170° 06'.  Front</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 44.19</LATITUDE>
+                <LONGITUDE>176 15.40</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Q G</LIGHT_CHARACTERISTICS_ENG>
+              <LIGHT_HEIGHT>20</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG> White and orange vertical stripes,  beacon<br/>White topmark, cone, point up<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">4</p></DESC_STRUCT_HEIGHT_ENG>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4547.41</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881953</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881951</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881952</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4547.41</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Kaingaroa Leading Light Rear</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>43 44.22</LATITUDE>
+                <LONGITUDE>176 15.39</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Iso  G 3s</LIGHT_CHARACTERISTICS_ENG>
+              <LIGHT_HEIGHT>24</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG> White and orange vertical stripes, pile beacon<br/>White topmark, cone, point down<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">4</p></DESC_STRUCT_HEIGHT_ENG>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4547.7</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881947</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>58743275</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881945</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4547.7</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Owenga.    Ldg Lts 142° 10'. Front</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>44 01.51</LATITUDE>
+                <LONGITUDE>176 21.93</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Q G</LIGHT_CHARACTERISTICS_ENG>
+              <LIGHT_HEIGHT>12</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Lattice beacon <br/>White topmark, triangle, point up<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">2</p></DESC_STRUCT_HEIGHT_ENG>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4547.71</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881946</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881949</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881948</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4547.71</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Owenga. Rear</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>44 01.53</LATITUDE>
+                <LONGITUDE>176 21.91</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Iso  G 4s</LIGHT_CHARACTERISTICS_ENG>
+              <LIGHT_HEIGHT>17</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Lattice beacon <br/>White topmark, triangle, point down<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">4</p></DESC_STRUCT_HEIGHT_ENG>
+              <NM_LIGHTS_OBMNZ>No</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_LIGHT_LIST_RECORD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <PRODUCT_REF>
+                <PRODUCTVER_ID>586902</PRODUCTVER_ID>
+                <UPDATE_KEY>4549</UPDATE_KEY>
+                <CONTRIBUTING_FEATURE_LIST>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881944</CONTRIBUTING_FEATURE_VERSION_ID>
+                  <CONTRIBUTING_FEATURE_VERSION_ID>37881942</CONTRIBUTING_FEATURE_VERSION_ID>
+                </CONTRIBUTING_FEATURE_LIST>
+              </PRODUCT_REF>
+              <NATIONAL_NUMBER xsi:nil="true"/>
+              <INTERNATIONAL_NUMBER>4549</INTERNATIONAL_NUMBER>
+              <LOC_NAME_CHART_NUM_ENG>Cape Fournier</LOC_NAME_CHART_NUM_ENG>
+              <POSITION>
+                <LATITUDE>44 03.11</LATITUDE>
+                <LONGITUDE>176 19.89</LONGITUDE>
+              </POSITION>
+              <LIGHT_CHARACTERISTICS_ENG>Fl(2)W 15s</LIGHT_CHARACTERISTICS_ENG>
+              <LUM_GEO_RANGE>9</LUM_GEO_RANGE>
+              <LIGHT_HEIGHT>122</LIGHT_HEIGHT>
+              <DESC_STRUCT_HEIGHT_ENG>Metal tower<p style="text-align:center;margin-top: 0px;margin-bottom: 2px;">4</p></DESC_STRUCT_HEIGHT_ENG>
+              <OBSERVATION_ENG><br/>Aluminium. </OBSERVATION_ENG>
+              <NM_REMARKS>
+                <i>fl 1, ec 2, </i>
+                <i>fl 1, ec 11</i>
+                <br/>
+              </NM_REMARKS>
+              <NM_LIGHTS_OBMNZ>Yes</NM_LIGHTS_OBMNZ>
+            </NM_LIGHT_LIST_RECORD>
+          </SECTION_CONTENT_LIST_ITEM>
+        </SECTION_CONTENT_LIST>
+      </NM_NZ204_LIGHTLIST_GROUP>
+    </SECTION_LIST_ITEM>
+  </SECTION_LIST>
+</NM_NZ204_LOL_PUBLICATION>

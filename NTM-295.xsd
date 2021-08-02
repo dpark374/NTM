@@ -1,0 +1,3227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="ACTION">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Insert"/>
+      <xs:enumeration value="Delete"/>
+      <xs:enumeration value="Modify"/>
+      <xs:enumeration value="Replace"/>
+      <xs:enumeration value="Move"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ATTACHMENT">
+    <xs:sequence>
+      <xs:element name="TAG" type="TAG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LABEL" type="LABEL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FILENAME" type="FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATT_DESCRIPTION" type="ATT_DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_IMG_TYPE" type="NM_IMG_TYPE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_IMAGE_SIZE" type="NM_IMAGE_SIZE" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ATTACHMENT_LIST">
+    <xs:sequence>
+      <xs:element name="ATTACHMENT" type="ATTACHMENT" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ATT_DESCRIPTION" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AUTHORITY">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="BDRTYP">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="BOUNDARY_MAX" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BOUNDARY_MIN" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CALLSIGN">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CANCELLED_NOTICE_NUMBER">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CANCELLED_PUB_ID">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CANCELLED_PUB_YEAR">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="CHART">
+    <xs:sequence>
+      <xs:element name="CHART_TITLE" type="CHART_TITLE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_NUM" type="CHART_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_INT_NUM" type="CHART_INT_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="EDITION_DATE" type="EDITION_DATE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LAST_CORRECTION" type="LAST_CORRECTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NOTICE_COUNT" type="NOTICE_COUNT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANEL" type="PANEL" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CHART_INT_NUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="CHART_LIST">
+    <xs:sequence>
+      <xs:element name="CHART" type="CHART" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CHART_NUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CHART_SCALE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CHART_TITLE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CHTCOM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CHTNUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CHTYPE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>INT Chart</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Harbour Insets</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CMMNTS">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="COMMENT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="CONTRIBUTING_FEATURE_LIST">
+    <xs:sequence>
+      <xs:element name="CONTRIBUTING_FEATURE_VERSION_ID" type="CONTRIBUTING_FEATURE_VERSION_ID" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CONTRIBUTING_FEATURE_VERSION_ID">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="38"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="COORDINATE" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CRS">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CTDATE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CTITL1">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CTITL2">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="DEFINED_STATUS">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Defined"/>
+      <xs:enumeration value="Non Defined"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DEPDAT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="DEPUNT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="DESCRIPTION" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DESCRIPTION_ENG" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DESCRIPTION_NAT" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DESC_STRUCT_HEIGHT_ENG" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DOCUMENT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="EDDATE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="EDITION">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="EDITION_DATE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="EDNUMB">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:complexType name="ENC_LIST">
+    <xs:sequence>
+      <xs:element name="ENC_NAME" type="ENC_NAME" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ENC_NAME">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ENC_NEW_EDITION">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="FILENAME">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="FOID">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="FOID_LIST">
+    <xs:sequence>
+      <xs:element name="FOID" type="FOID" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="GRTINT">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="HGHTDA">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HGHTUN">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HITS_NUMBER">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HORIZ_DATUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="INTERNATIONAL_NUMBER">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="INTNUM">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="IS_PUBLISHED">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="LABEL">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="LASTUPDATE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="LAST_CORRECTION">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="LATITUDE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="LAYOUT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Portrait</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Landscape</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="LIGHT_CHARACTERISTICS_ENG" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LIGHT_HEIGHT">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:complexType name="LOC_NAME_CHART_NUM_ENG" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LOC_NAME_CHART_NUM_ENG_SUM" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LONGITUDE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="LTSTNM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="LUM_GEO_RANGE" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="MARGNB">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="MARGNL">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="MARGNR">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="MARGNT">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="NAME">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NAME_NATIONAL">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NATIONAL_NUMBER">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_BALOL">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_CHART_AFFECTED">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Chart affected:"/>
+      <xs:enumeration value="Chart formerly affected:"/>
+      <xs:enumeration value="Chart temporarily affected:"/>
+      <xs:enumeration value="Charts affected:"/>
+      <xs:enumeration value="Charts temporarily affected:"/>
+      <xs:enumeration value="Charts formerly affected:"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NM_CHART_AFFECTED_LIST">
+    <xs:sequence>
+      <xs:element name="NM_CHART_AFFECTED" type="NM_CHART_AFFECTED" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CHART_NUM" type="CHART_NUM" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_CHART_ANNO">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_CHART_NtoM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_CONTENT" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CONTENT_COMP">
+    <xs:sequence>
+      <xs:element name="TITLE" type="TITLE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_CONTENT" type="NM_CONTENT" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_DISPLAY_ALMANAC_PUB">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Yes"/>
+      <xs:enumeration value="No"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NM_EDITION">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_EXPLANATORY_NOTE">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PARAGRAPH_LIST" type="PARAGRAPH_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_FP_PARA" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_FREQUENCY">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_IMAGE_HEIGHT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_IMAGE_SIZE">
+    <xs:sequence>
+      <xs:element name="NM_IMAGE_HEIGHT" type="NM_IMAGE_HEIGHT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_IMAGE_WIDTH" type="NM_IMAGE_WIDTH" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_IMAGE_WIDTH">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_IMG_TYPE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Notes"/>
+      <xs:enumeration value="Block Correction"/>
+      <xs:enumeration value="Tracings"/>
+      <xs:enumeration value="Others"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NM_LIGHTS_OBMNZ">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_LINZ_LOGO">
+    <xs:sequence>
+      <xs:element name="FILENAME" type="FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATT_DESCRIPTION" type="ATT_DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_MONTH">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="January"/>
+      <xs:enumeration value="February"/>
+      <xs:enumeration value="March"/>
+      <xs:enumeration value="April"/>
+      <xs:enumeration value="May"/>
+      <xs:enumeration value="June"/>
+      <xs:enumeration value="July"/>
+      <xs:enumeration value="August"/>
+      <xs:enumeration value="September"/>
+      <xs:enumeration value="October"/>
+      <xs:enumeration value="November"/>
+      <xs:enumeration value="December"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NM_NAV_LABEL">
+    <xs:sequence>
+      <xs:element name="NM_CONTENT" type="NM_CONTENT" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_NOTE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_NZG_LOGO">
+    <xs:sequence>
+      <xs:element name="FILENAME" type="FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATT_DESCRIPTION" type="ATT_DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_NZHA">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_NZ_LIGHTLIST">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_PLAN">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Yes"/>
+      <xs:enumeration value="No"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NM_PORT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_PRECISION">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NM_PUB_CAN_COMP">
+    <xs:sequence>
+      <xs:element name="NZ_ANN_PUB_NUM" type="NZ_ANN_PUB_NUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_REMARKS_LIST" type="NZ_CHART_REMARKS_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_CAN_LIST">
+    <xs:sequence>
+      <xs:element name="NM_PUB_CAN_COMP" type="NM_PUB_CAN_COMP" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_LABEL">
+    <xs:sequence>
+      <xs:element name="NM_PUB_NAME" type="NM_PUB_NAME" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_NAME" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_NE_COMP">
+    <xs:sequence>
+      <xs:element name="NZ_ANN_PUB_NUM" type="NZ_ANN_PUB_NUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_REMARKS_LIST" type="NZ_CHART_REMARKS_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_NE_LIST">
+    <xs:sequence>
+      <xs:element name="NM_PUB_NE_COMP" type="NM_PUB_NE_COMP" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_RANGE_COMP">
+    <xs:sequence>
+      <xs:element name="NM_RANGE_MIN" type="NM_RANGE_MIN" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_RANGE_MAX" type="NM_RANGE_MAX" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_RANGE_MAX">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="NM_RANGE_MIN">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_REMARKS" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_RNC_LIST">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BSB_Update"/>
+      <xs:enumeration value="BSB_Base"/>
+      <xs:enumeration value="Both"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NM_TANDP_TITLE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_TORPCOLUMN_DATA" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_TORP_INSTRUCTION" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_TORP_LABEL">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_TORP_LIST" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_TORP_TABLE">
+    <xs:sequence>
+      <xs:element name="NM_TORP_TABLE_LIST" type="NM_TORP_TABLE_LIST" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_TORP_TABLE_LIST">
+    <xs:sequence>
+      <xs:element name="NM_TORP_LABEL" type="NM_TORP_LABEL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_TANDP_TITLE" type="NM_TANDP_TITLE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_TORPCOLUMN_DATA" type="NM_TORPCOLUMN_DATA" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_TP_CONTENT">
+    <xs:sequence>
+      <xs:element name="NM_TORP_INSTRUCTION" type="NM_TORP_INSTRUCTION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_TORP_LIST" type="NM_TORP_LIST" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_TORP_TABLE" type="NM_TORP_TABLE" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_TRACING">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Yes"/>
+      <xs:enumeration value="No"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NM_USEOFCHART_NOTE">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PARAGRAPH_LIST" type="PARAGRAPH_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NM_YEAR_PUB">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NOTICE_COUNT">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="NREGN1">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NREGN2">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NTCCNT">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_204_REGION">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CHATHAM ISLANDS"/>
+      <xs:enumeration value="NORTH ISLAND"/>
+      <xs:enumeration value="SOUTH ISLAND"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_ANN_PUB_NUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_AUTHORITY">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_CAT_PAGE_NUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NZ_CHART_AFFECTED">
+    <xs:sequence>
+      <xs:element name="NM_CHART_NtoM" type="NM_CHART_NtoM" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NZ_CHART_LISTS" type="NZ_CHART_LISTS" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NZ_CHART_CAT_EDN">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_CHART_LISTS">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_CHART_NEW_EDN">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_CHART_NUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_CHART_PUB">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="38"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NZ_CHART_REMARKS" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NZ_CHART_REMARKS_LIST">
+    <xs:sequence>
+      <xs:element name="NZ_CHART_REMARKS" type="NZ_CHART_REMARKS" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NZ_FOLIO_REGION">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PACIFIC OCEAN"/>
+      <xs:enumeration value="NEW ZEALAND"/>
+      <xs:enumeration value="NORTH ISLAND"/>
+      <xs:enumeration value="SOUTH ISLAND"/>
+      <xs:enumeration value="NORTHERN ZONE"/>
+      <xs:enumeration value="AUCKLAND ZONE"/>
+      <xs:enumeration value="COOK STRAIT ZONE"/>
+      <xs:enumeration value="SOUTHERN ZONE"/>
+      <xs:enumeration value="SOUTH WEST PACIFIC OCEAN"/>
+      <xs:enumeration value="TONGA"/>
+      <xs:enumeration value="SOUTHERN OCEAN AND ROSS DEPENDENCY"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_LOCALITY">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NEW ZEALAND - Kermadec Islands"/>
+      <xs:enumeration value="NEW ZEALAND - North Island - South Coast"/>
+      <xs:enumeration value="NEW ZEALAND - North Island - East Coast"/>
+      <xs:enumeration value="NEW ZEALAND - North Island - West Coast"/>
+      <xs:enumeration value="NEW ZEALAND - North Island - Three Kings Islands"/>
+      <xs:enumeration value="NEW ZEALAND - Cook Strait"/>
+      <xs:enumeration value="NEW ZEALAND - South Island - North Coast"/>
+      <xs:enumeration value="NEW ZEALAND - South Island - West Coast"/>
+      <xs:enumeration value="NEW ZEALAND - South Island - East Coast"/>
+      <xs:enumeration value="NEW ZEALAND - South Island - South Coast"/>
+      <xs:enumeration value="NEW ZEALAND - Stewart Island/Rakiura"/>
+      <xs:enumeration value="NEW ZEALAND - Chatham Islands"/>
+      <xs:enumeration value="NEW ZEALAND - Bounty and Anitpodes Islands"/>
+      <xs:enumeration value="NEW ZEALAND - Campbell Island / Motu Ihupuku"/>
+      <xs:enumeration value="NEW ZEALAND - Auckland Islands"/>
+      <xs:enumeration value="NEW ZEALAND - Snares Islands / Tini Heke"/>
+      <xs:enumeration value="AUSTRALIA - North East"/>
+      <xs:enumeration value="AUSTRALIA - South East"/>
+      <xs:enumeration value="SOUTH PACIFIC OCEAN"/>
+      <xs:enumeration value="SOUTH PACIFIC OCEAN - New Zealand"/>
+      <xs:enumeration value="SOUTHERN OCEAN"/>
+      <xs:enumeration value="PAPUA NEW GUINEA"/>
+      <xs:enumeration value="SOLOMON ISLANDS"/>
+      <xs:enumeration value="VANUATU"/>
+      <xs:enumeration value="NOUVELLE-CALÉDONIE"/>
+      <xs:enumeration value="FIJI"/>
+      <xs:enumeration value="TONGA - Niuafo'ou"/>
+      <xs:enumeration value="TONGA - Niuatoputapu"/>
+      <xs:enumeration value="TONGA - Vava'u Group"/>
+      <xs:enumeration value="TONGA -  Ha'apai Group"/>
+      <xs:enumeration value="TONGA - Tongatapu and 'Eau"/>
+      <xs:enumeration value="NIUE"/>
+      <xs:enumeration value="TOKELAU"/>
+      <xs:enumeration value="SAMOA - Savaii Island"/>
+      <xs:enumeration value="SAMOA - Upolu Island"/>
+      <xs:enumeration value="SAMOA - Apolima Strait"/>
+      <xs:enumeration value="COOK ISLANDS - Northern Cook Islands"/>
+      <xs:enumeration value="COOK ISLANDS - Southern Cook Islands"/>
+      <xs:enumeration value="COOK ISLANDS - Rarotonga"/>
+      <xs:enumeration value="POLYNÉSIE FRANÇAISE - Îles de la Société"/>
+      <xs:enumeration value="POLYNÉSIE FRANÇAISE - Îles Marquises"/>
+      <xs:enumeration value="POLYNÉSIE FRANÇAISE - Archipel des Tuamotu"/>
+      <xs:enumeration value="POLYNÉSIE FRANÇAISE - Îles Gambier"/>
+      <xs:enumeration value="POLYNÉSIE FRANÇAISE - Îles Australes"/>
+      <xs:enumeration value="AMERICAN SAMOA"/>
+      <xs:enumeration value="ANTARCTICA - Ross Sea - Scott Island"/>
+      <xs:enumeration value="ANTARCTICA - Ross Sea - Balleny Island"/>
+      <xs:enumeration value="ANTARCTICA - Ross Sea - Ross Island"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NZ_NOTICE_IN_FORCE">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="38"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="OBSERVATION_ENG" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ORIGINAL">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Yes"/>
+      <xs:enumeration value="No"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PAGE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="PANEL">
+    <xs:sequence>
+      <xs:element name="PANEL_NAME" type="PANEL_NAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANEL_NUM" type="PANEL_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HORIZ_DATUM" type="HORIZ_DATUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_SCALE" type="CHART_SCALE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANEL_LIMITS" type="PANEL_LIMITS" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PANEL_LIMITS">
+    <xs:sequence>
+      <xs:element name="PANEL_LIMIT_MINY" type="PANEL_LIMIT_MINY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANEL_LIMIT_MINX" type="PANEL_LIMIT_MINX" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANEL_LIMIT_MAXY" type="PANEL_LIMIT_MAXY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANEL_LIMIT_MAXX" type="PANEL_LIMIT_MAXX" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PANEL_LIMIT_MAXX">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANEL_LIMIT_MAXY">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANEL_LIMIT_MINX">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANEL_LIMIT_MINY">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANEL_NAME">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANEL_NUM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANNAM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANNUM">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANORD">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANPOS">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANTIT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PANTYP">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Index</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Base</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Inset</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Extension</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Graphic</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PARAGRAPH_ENG" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PARAGRAPH_LIST">
+    <xs:sequence>
+      <xs:element name="PARA_COMPLEX" type="PARA_COMPLEX" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PARAGRAPH_PREFIX" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PARA_COMPLEX">
+    <xs:sequence>
+      <xs:element name="PARAGRAPH_PREFIX" type="PARAGRAPH_PREFIX" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PARA_INDENT" type="PARA_INDENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PARAGRAPH_ENG" type="PARAGRAPH_ENG" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PARA_INDENT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Level_0"/>
+      <xs:enumeration value="Level_1"/>
+      <xs:enumeration value="Level_2"/>
+      <xs:enumeration value="Level_3"/>
+      <xs:enumeration value="Level_4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PARCON">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PARUSD">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PHEIGH">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="PLACEMENT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="POSITION">
+    <xs:sequence>
+      <xs:element name="TAG" type="TAG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LATITUDE" type="LATITUDE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LONGITUDE" type="LONGITUDE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="POS_DESCRIPTION" type="POS_DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="REFERENCE" type="REFERENCE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="COORDINATE" type="COORDINATE" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="POSITION_LIST">
+    <xs:sequence>
+      <xs:element name="POSITION" type="POSITION" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="POS_DESCRIPTION" mixed="true">
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PPSIZE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Letter</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Legal</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Tabloid</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Executive</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Double Postcard</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ANSI C</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ANSI D</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ANSI E</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ARCH A</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ARCH B</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ARCH C</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ARCH D</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ARCH E</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ISO A4</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="14">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ISO A3</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="15">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ISO A2</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="16">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ISO A1</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="17">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ISO A0</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="18">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>JIS B5</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="19">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>JIS B4</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>JIS B3</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="21">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>JIS B2</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="22">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>JIS B1</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="23">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>COM10</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="24">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Monarch</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="25">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>DL</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="26">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>C5</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="27">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ISO B5</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="28">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Custom</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PRODGRP">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>HPDProducts</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PRODTMPLT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PRODUCTVER_ID">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="38"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PRODUCT_REF">
+    <xs:sequence>
+      <xs:element name="PRODUCTVER_ID" type="PRODUCTVER_ID" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="UPDATE_KEY" type="UPDATE_KEY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CONTRIBUTING_FEATURE_LIST" type="CONTRIBUTING_FEATURE_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PRODUCT_STATUS">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PROFILE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Paper Chart Version: 1</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PRONAM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PSCALE">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="PUBCOMMENT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PUBCON">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PUBDAT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="PUBLICATION_REF">
+    <xs:sequence>
+      <xs:element name="DOCUMENT" type="DOCUMENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PAGE" type="PAGE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LASTUPDATE" type="LASTUPDATE" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PUBLISHED_FILENAME">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PUBLISH_DATE">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+  <xs:simpleType name="PUBLISH_NUMBER">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="PWIDTH">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="REFERENCE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="REGION">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SAREA1">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SAREA2">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCAFTR">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="SEANUM">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="SECTION_NUMBER">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SELF_CANCEL_DATE">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+  <xs:simpleType name="SELF_CANCEL_PUBLISH">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Yes"/>
+      <xs:enumeration value="No"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SHEET1">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SHEET2">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SHFTEW">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="SHFTNS">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="SRCHDP">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SRCHDT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SUBJECT">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SUB_REGION">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SYMLIB">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TAG">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TERM">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Temporary"/>
+      <xs:enumeration value="Preliminary"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TITLE">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TSHEET">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Chart Insets</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Harbour Plans</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TYPE_NAME">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="UPDATE_KEY">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="USER_WRITE_ACCESS">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="USGNAM">
+    <xs:sequence>
+      <xs:element name="Value" type="Value" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="USRNAM">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="VERSION">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="VICINITY">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="Value">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>1a Overview (6m and smaller)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>1b Overview (3m-5 999 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>1c Overview (1.5m-2 999 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>2a General (700k-1 499 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>2b General (350k-699 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>3a Coastal (260k-349 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="14">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>3b Coastal (180k-259 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="15">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>3c Coastal (90k-179 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="16">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>4a Approach (70k-89 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="17">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>4b Approach (45k-69 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="18">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>4c Approach (36k-44 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="19">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>4d Approach (30k-35 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>4e Approach (22k-29 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="21">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>5a Harbour (17k-21 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="22">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>5b Harbour (12k-16 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="23">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>5c Harbour (8k-11 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="24">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>5d Harbour (4k-7 999)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="25">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>6 Berthing (Larger than 4k)</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="26">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Aids to NavigationV3.2</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="27">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Wrecks and Obstructions</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="28">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>ZOC</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="29">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Maritime Boundaries</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="30">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Tracks and Routes</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="31">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>General Limits</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="211">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>NMOverlay</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="215">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>Aids to NavigationV4</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="217">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>AtoN-26-Feb-21</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="218">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>AtoN-26-Mar-21</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="219">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>NTM-287-TESTING</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="220">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>AtoN-29-Apr-21</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="XSLT_FILENAME">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="annoid">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="chprid">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="chtlnk">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="chtsts">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="external">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>False</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>
+            <Name>True</Name>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="frcdsp">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="presid">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="sdgfc">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="sdgsz">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="sndrnd">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="sourceCRS_createdDate">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="sourceCRS_description">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="sourceCRS_wkt">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="NM_FRONT_PAGE">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_FP_PARA" type="NM_FP_PARA" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NM_LINZ_LOGO" type="NM_LINZ_LOGO" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_NZHA" type="NM_NZHA" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_NZG_LOGO" type="NM_NZG_LOGO" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_SECI">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_EXPLANATORY_NOTE" type="NM_EXPLANATORY_NOTE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_USEOFCHART_NOTE" type="NM_USEOFCHART_NOTE" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_SECTION">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_LISTS" type="NZ_CHART_LISTS" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NM_PUB_LABEL" type="NM_PUB_LABEL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_PNC_PRD" type="NM_PNC_PRD"/>
+                  <xs:element name="NM_PNC_PRD_TPUB" type="NM_PNC_PRD_TPUB"/>
+                  <xs:element name="NM_ENC_PRD" type="NM_ENC_PRD"/>
+                  <xs:element name="NM_PUB_PRD" type="NM_PUB_PRD"/>
+                  <xs:element name="NM_BSB_PRD" type="NM_BSB_PRD"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_ENC">
+    <xs:sequence>
+      <xs:element name="ENC_NAME" type="ENC_NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="REGION" type="REGION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SUB_REGION" type="SUB_REGION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="VICINITY" type="VICINITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_PUB">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ENC_LIST" type="ENC_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_ANN_PUB_NUM" type="NZ_ANN_PUB_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_PNCNCP">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_REMARKS" type="NZ_CHART_REMARKS" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ENC_LIST" type="ENC_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CAT_PAGE_NUM" type="NZ_CAT_PAGE_NUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_PNCNEP">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_REMARKS" type="NZ_CHART_REMARKS" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ENC_LIST" type="ENC_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_NOTICE_IN_FORCE" type="NZ_NOTICE_IN_FORCE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CAT_PAGE_NUM" type="NZ_CAT_PAGE_NUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_PNCPW">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_PNCNCTBP">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_PNCNETBP">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_PRD">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_PNC_CPW" type="NM_PNC_CPW"/>
+                  <xs:element name="NM_PNC_NECPUB" type="NM_PNC_NECPUB"/>
+                  <xs:element name="NM_PNC_NEPUB" type="NM_PNC_NEPUB"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_PRD_TPUB">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_PNC_NCTPUB" type="NM_PNC_NCTPUB"/>
+                  <xs:element name="NM_PNC_NETPUB" type="NM_PNC_NETPUB"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_BSB_PRD">
+    <xs:sequence>
+      <xs:element name="NM_CONTENT_COMP" type="NM_CONTENT_COMP" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NM_RNC_LIST" type="NM_RNC_LIST" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_ENC_PRD">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_ENC_PUB" type="NM_ENC_PUB"/>
+                  <xs:element name="NM_ENCPW" type="NM_ENCPW"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_ENC_PUB">
+    <xs:sequence>
+      <xs:element name="NM_CONTENT_COMP" type="NM_CONTENT_COMP" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MISC_INSTRUCT_ENC" type="NM_MISC_INSTRUCT_ENC"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_ENCPW">
+    <xs:sequence>
+      <xs:element name="COMMENT" type="COMMENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MISC_INSTRUCT_ENCPW" type="NM_MISC_INSTRUCT_ENCPW"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT_ENCPW">
+    <xs:sequence>
+      <xs:element name="ENC_NAME" type="ENC_NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ENC_NEW_EDITION" type="ENC_NEW_EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_SECTION_CAT_GROUP">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NAME_NATIONAL" type="NAME_NATIONAL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION_NAT" type="DESCRIPTION_NAT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION_ENG" type="DESCRIPTION_ENG" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CAT_SUBSECTION">
+    <xs:sequence>
+      <xs:element name="NM_CHART_ANNO" type="NM_CHART_ANNO" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_PRD">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_DISPLAY_ALMANAC_PUB" type="NM_DISPLAY_ALMANAC_PUB" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_PUB_NE" type="NM_PUB_NE"/>
+                  <xs:element name="NM_PUB_CAN" type="NM_PUB_CAN"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_NE">
+    <xs:sequence>
+      <xs:element name="NM_PUB_NE_LIST" type="NM_PUB_NE_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PUB_CAN">
+    <xs:sequence>
+      <xs:element name="NM_PUB_CAN_LIST" type="NM_PUB_CAN_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_PUB">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_TPUB">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_NCTPUB">
+    <xs:sequence>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MISC_INSTRUCT_PNCNCTBP" type="NM_MISC_INSTRUCT_PNCNCTBP"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_NETPUB">
+    <xs:sequence>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MISC_INSTRUCT_PNCNETBP" type="NM_MISC_INSTRUCT_PNCNETBP"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_NECPUB">
+    <xs:sequence>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MISC_INSTRUCT_PNCNCP" type="NM_MISC_INSTRUCT_PNCNCP"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_NEPUB">
+    <xs:sequence>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MISC_INSTRUCT_PNCNEP" type="NM_MISC_INSTRUCT_PNCNEP"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_PNC_CPW">
+    <xs:sequence>
+      <xs:element name="COMMENT" type="COMMENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MISC_INSTRUCT_PNCPW" type="NM_MISC_INSTRUCT_PNCPW"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MISC_INSTRUCT">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="POSITION_LIST" type="POSITION_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FOID_LIST" type="FOID_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ENC_LIST" type="ENC_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LAST_CORRECTION" type="LAST_CORRECTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ACTION" type="ACTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION" type="DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CAT_SECTION">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CHART_CAT" type="NM_CHART_CAT"/>
+                  <xs:element name="NM_CAT_ANTOM" type="NM_CAT_ANTOM"/>
+                  <xs:element name="NM_SECTION_LIGHTLIST_PRODUCT" type="NM_SECTION_LIGHTLIST_PRODUCT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CAT_ANTOM">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_YEAR_PUB" type="NM_YEAR_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SUBJECT" type="SUBJECT" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PAGE" type="PAGE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_CONTENT" type="NM_CONTENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CAT_SUB_ANTOM" type="NM_CAT_SUB_ANTOM"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CAT_SUB_ANTOM">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ACTION" type="ACTION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_PORT" type="NM_PORT" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CALLSIGN" type="CALLSIGN" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_FREQUENCY" type="NM_FREQUENCY" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CHART_CAT">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_CAT_EDN" type="NZ_CHART_CAT_EDN" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_ANN_PUB_NUM" type="NZ_ANN_PUB_NUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CAT_SEC_CONT" type="NM_CAT_SEC_CONT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CAT_SEC_CONT">
+    <xs:sequence>
+      <xs:element name="PUBLISH_NUMBER" type="PUBLISH_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_PUBLISH" type="SELF_CANCEL_PUBLISH" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_DATE" type="SELF_CANCEL_DATE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CAT_PAGE_NUM" type="NZ_CAT_PAGE_NUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_FOLIO_REGION" type="NZ_FOLIO_REGION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ACTION" type="ACTION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CAT_INSTRUCTIONS" type="NM_CAT_INSTRUCTIONS"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CAT_INSTRUCTIONS">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_EDITION" type="NM_EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_SECTION_LIGHTLIST_PRODUCT">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_YEAR_PUB" type="NM_YEAR_PUB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_ANN_PUB_NUM" type="NZ_ANN_PUB_NUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SUBJECT" type="SUBJECT" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_LIGHT_LIST_RECORD" type="NM_LIGHT_LIST_RECORD"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_LIGHT_LIST_UPDATE">
+    <xs:sequence>
+      <xs:element name="PRODUCT_REF" type="PRODUCT_REF" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NATIONAL_NUMBER" type="NATIONAL_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INTERNATIONAL_NUMBER" type="INTERNATIONAL_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LOC_NAME_CHART_NUM_ENG" type="LOC_NAME_CHART_NUM_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="POSITION" type="POSITION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LIGHT_CHARACTERISTICS_ENG" type="LIGHT_CHARACTERISTICS_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LUM_GEO_RANGE" type="LUM_GEO_RANGE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LIGHT_HEIGHT" type="LIGHT_HEIGHT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESC_STRUCT_HEIGHT_ENG" type="DESC_STRUCT_HEIGHT_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OBSERVATION_ENG" type="OBSERVATION_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DEFINED_STATUS" type="DEFINED_STATUS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_LIGHTS_OBMNZ" type="NM_LIGHTS_OBMNZ" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_REMARKS" type="NM_REMARKS" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN">
+    <xs:sequence>
+      <xs:element name="PUBLISH_NUMBER" type="PUBLISH_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_PUBLISH" type="SELF_CANCEL_PUBLISH" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_DATE" type="SELF_CANCEL_DATE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_GENERALINSTRUCT" type="NM_GENERALINSTRUCT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_SECIII">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_CONTENT_COMP" type="NM_CONTENT_COMP" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GENERALINSTRUCT">
+    <xs:sequence>
+      <xs:element name="ACTION" type="ACTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PLACEMENT" type="PLACEMENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_CONTENT" type="NM_CONTENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_SECIV">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_LISTS" type="NZ_CHART_LISTS" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_SECVI">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_CONTENT" type="NM_CONTENT" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_SECVII">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_NAV_LABEL" type="NM_NAV_LABEL" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NM_CONTENT_COMP" type="NM_CONTENT_COMP" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_HYDNOTE">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_CONTENT" type="NM_CONTENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NTC_PUBLICATION">
+    <xs:sequence>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PUBLISHED_FILENAME" type="PUBLISHED_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="XSLT_FILENAME" type="XSLT_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLISH_DATE" type="PUBLISH_DATE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_RANGE_COMP" type="NM_RANGE_COMP" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBCOMMENT" type="PUBCOMMENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_FRONT_PAGE" type="NM_FRONT_PAGE"/>
+                  <xs:element name="NM_GEN_SEC_HYD" type="NM_GEN_SEC_HYD"/>
+                  <xs:element name="NM_GEN_SECI" type="NM_GEN_SECI"/>
+                  <xs:element name="NM_MISC_SECTION" type="NM_MISC_SECTION"/>
+                  <xs:element name="NM_GEN_SECIII" type="NM_GEN_SECIII"/>
+                  <xs:element name="NM_CHART_SECTION" type="NM_CHART_SECTION"/>
+                  <xs:element name="NM_CAT_SECTION" type="NM_CAT_SECTION"/>
+                  <xs:element name="NM_GEN_SECVI" type="NM_GEN_SECVI"/>
+                  <xs:element name="NM_GEN_SECVII" type="NM_GEN_SECVII"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AFFECTED_CHART_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PPRCHT" minOccurs="0" maxOccurs="unbounded" type="PPRCHT"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_HYDINST">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_CONTENT" type="NM_CONTENT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CHARTS_LIST_RECORD">
+    <xs:sequence>
+      <xs:element name="PRODUCT_REF" type="PRODUCT_REF" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_NUM" type="NZ_CHART_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_SCALE" type="CHART_SCALE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_TITLE" type="CHART_TITLE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLISH_DATE" type="PUBLISH_DATE" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NTC_SECTION_NOTICE_GROUP">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NAME_NATIONAL" type="NAME_NATIONAL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION_NAT" type="DESCRIPTION_NAT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION_ENG" type="DESCRIPTION_ENG" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_SECTION_LIGHTLIST">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_LIGHTLIST" type="NM_LIGHTLIST"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CHART_SECTION">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_AFFECTED" type="NZ_CHART_AFFECTED" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CHART_NTC" type="NM_CHART_NTC"/>
+                  <xs:element name="NM_TORP_NTC" type="NM_TORP_NTC"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_TORP_INSTRUCT">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="POSITION_LIST" type="POSITION_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FOID_LIST" type="FOID_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ENC_LIST" type="ENC_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION" type="DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CHART_NTC">
+    <xs:sequence>
+      <xs:element name="PUBLISH_NUMBER" type="PUBLISH_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_PUBLISH" type="SELF_CANCEL_PUBLISH" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_DATE" type="SELF_CANCEL_DATE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_LOCALITY" type="NZ_LOCALITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="VICINITY" type="VICINITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SUBJECT" type="SUBJECT" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ORIGINAL" type="ORIGINAL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_TRACING" type="NM_TRACING" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_NOTE" type="NM_NOTE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_NZ_LIGHTLIST" type="NM_NZ_LIGHTLIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_BALOL" type="NM_BALOL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CANCELLED_NOTICE_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CANCELLED_NOTICE_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CHART_NTC" type="NM_CHART_NTC"/>
+                  <xs:element name="NM_EXTERNAL" type="NM_EXTERNAL"/>
+                  <xs:element name="NM_TORP_NTC" type="NM_TORP_NTC"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CHARTINSTRUCT" type="NM_CHARTINSTRUCT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_TORP_NTC">
+    <xs:sequence>
+      <xs:element name="PUBLISH_NUMBER" type="PUBLISH_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_PUBLISH" type="SELF_CANCEL_PUBLISH" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_DATE" type="SELF_CANCEL_DATE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TERM" type="TERM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_LOCALITY" type="NZ_LOCALITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="VICINITY" type="VICINITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SUBJECT" type="SUBJECT" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_TP_CONTENT" type="NM_TP_CONTENT" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ORIGINAL" type="ORIGINAL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_CHART_AFFECTED_LIST" type="NM_CHART_AFFECTED_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_NOTE" type="NM_NOTE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_NZ_LIGHTLIST" type="NM_NZ_LIGHTLIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_BALOL" type="NM_BALOL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_AUTHORITY" type="NZ_AUTHORITY" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="HITS_NUMBER" type="HITS_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CANCELLED_NOTICE_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CANCELLED_NOTICE_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CHART_NTC" type="NM_CHART_NTC"/>
+                  <xs:element name="NM_EXTERNAL" type="NM_EXTERNAL"/>
+                  <xs:element name="NM_TORP_NTC" type="NM_TORP_NTC"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_TORP_INSTRUCT" type="NM_TORP_INSTRUCT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CHARTINSTRUCT">
+    <xs:sequence>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="POSITION_LIST" type="POSITION_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FOID_LIST" type="FOID_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ENC_LIST" type="ENC_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_PLAN" type="NM_PLAN" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_PRECISION" type="NM_PRECISION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ACTION" type="ACTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION" type="DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_LIST_CHART_RECORD">
+    <xs:sequence>
+      <xs:element name="PRODUCT_REF" type="PRODUCT_REF" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_NEW_EDN" type="NZ_CHART_NEW_EDN" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_SECTION_LIST_GROUP">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CHART_CAT" type="NM_CHART_CAT"/>
+                  <xs:element name="NM_CAT_ANTOM" type="NM_CAT_ANTOM"/>
+                  <xs:element name="NM_SECTION_LIGHTLIST_PRODUCT" type="NM_SECTION_LIGHTLIST_PRODUCT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_LIGHTLIST">
+    <xs:sequence>
+      <xs:element name="PUBLISH_NUMBER" type="PUBLISH_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_PUBLISH" type="SELF_CANCEL_PUBLISH" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SELF_CANCEL_DATE" type="SELF_CANCEL_DATE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLICATION_REF" type="PUBLICATION_REF" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="REGION" type="REGION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SUB_REGION" type="SUB_REGION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ORIGINAL" type="ORIGINAL" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="AUTHORITY" type="AUTHORITY" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_LIGHT_LIST_INSTRUCT" type="NM_LIGHT_LIST_INSTRUCT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_NZ204_LOL_PUBLICATION">
+    <xs:sequence>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PUBLISHED_FILENAME" type="PUBLISHED_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="XSLT_FILENAME" type="XSLT_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLISH_DATE" type="PUBLISH_DATE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_NZ204_LIGHTLIST_GROUP" type="NM_NZ204_LIGHTLIST_GROUP"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_NZ204_LIGHTLIST_GROUP">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="DESCRIPTION" type="DESCRIPTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_204_REGION" type="NZ_204_REGION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_YEAR_PUB" type="NM_YEAR_PUB" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_ANN_PUB_NUM" type="NZ_ANN_PUB_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_LIGHT_LIST_RECORD" type="NM_LIGHT_LIST_RECORD"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_LIGHT_LIST_RECORD">
+    <xs:sequence>
+      <xs:element name="PRODUCT_REF" type="PRODUCT_REF" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NATIONAL_NUMBER" type="NATIONAL_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INTERNATIONAL_NUMBER" type="INTERNATIONAL_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LOC_NAME_CHART_NUM_ENG" type="LOC_NAME_CHART_NUM_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="POSITION" type="POSITION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LIGHT_CHARACTERISTICS_ENG" type="LIGHT_CHARACTERISTICS_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LUM_GEO_RANGE" type="LUM_GEO_RANGE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LIGHT_HEIGHT" type="LIGHT_HEIGHT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESC_STRUCT_HEIGHT_ENG" type="DESC_STRUCT_HEIGHT_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OBSERVATION_ENG" type="OBSERVATION_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DEFINED_STATUS" type="DEFINED_STATUS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_REMARKS" type="NM_REMARKS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NM_LIGHTS_OBMNZ" type="NM_LIGHTS_OBMNZ" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_LIGHT_LIST_INSTRUCT">
+    <xs:sequence>
+      <xs:element name="ACTION" type="ACTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NATIONAL_NUMBER" type="NATIONAL_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INTERNATIONAL_NUMBER" type="INTERNATIONAL_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DEFINED_STATUS" type="DEFINED_STATUS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LOC_NAME_CHART_NUM_ENG" type="LOC_NAME_CHART_NUM_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LOC_NAME_CHART_NUM_ENG_SUM" type="LOC_NAME_CHART_NUM_ENG_SUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="POSITION" type="POSITION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LIGHT_CHARACTERISTICS_ENG" type="LIGHT_CHARACTERISTICS_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LIGHT_HEIGHT" type="LIGHT_HEIGHT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LUM_GEO_RANGE" type="LUM_GEO_RANGE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DESC_STRUCT_HEIGHT_ENG" type="DESC_STRUCT_HEIGHT_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OBSERVATION_ENG" type="OBSERVATION_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LIST_RECORD_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LIST_RECORD_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_LIGHT_LIST_RECORD" type="NM_LIGHT_LIST_RECORD"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_EXTERNAL">
+    <xs:sequence>
+      <xs:element name="CANCELLED_NOTICE_NUMBER" type="CANCELLED_NOTICE_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CANCELLED_PUB_YEAR" type="CANCELLED_PUB_YEAR" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CANCELLED_PUB_ID" type="CANCELLED_PUB_ID" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_NZ202_LIST_RECORD">
+    <xs:sequence>
+      <xs:element name="PRODUCT_REF" type="PRODUCT_REF" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DEFINED_STATUS" type="DEFINED_STATUS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OBSERVATION_ENG" type="OBSERVATION_ENG" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_NZ202_CATALOGUE_PUBLICATION">
+    <xs:sequence>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PUBLISHED_FILENAME" type="PUBLISHED_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="XSLT_FILENAME" type="XSLT_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLISH_DATE" type="PUBLISH_DATE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_NZ202_CATALOGUE_PRODUCT" type="NM_NZ202_CATALOGUE_PRODUCT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_NZ202_CATALOGUE_PRODUCT">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_CAT_EDN" type="NZ_CHART_CAT_EDN" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_ANN_PUB_NUM" type="NZ_ANN_PUB_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CAT_PAGE_NUM" type="NZ_CAT_PAGE_NUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_FOLIO_REGION" type="NZ_FOLIO_REGION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ACTION" type="ACTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CATALOGUE_LIST_RECORD" type="NM_CATALOGUE_LIST_RECORD"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CATALOGUE_LIST_RECORD">
+    <xs:sequence>
+      <xs:element name="PRODUCT_REF" type="PRODUCT_REF" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NZ_CHART_PUB" type="NZ_CHART_PUB" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_NZ202_INSTRUCT">
+    <xs:sequence>
+      <xs:element name="ACTION" type="ACTION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NATIONAL_NUMBER" type="NATIONAL_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DEFINED_STATUS" type="DEFINED_STATUS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LOC_NAME_CHART_NUM_ENG" type="LOC_NAME_CHART_NUM_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OBSERVATION_ENG" type="OBSERVATION_ENG" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_LIST" type="CHART_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_LIST_RECORD_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CHART_LIST_RECORD_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_NZ202_LIST_RECORD" type="NM_NZ202_LIST_RECORD"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="INSTRUCTION_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSTRUCTION_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN">
+                    <xs:complexType>
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GENERAL_SECTIONVI">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_GEN_SECVI" type="NM_GEN_SECVI"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GENERAL_SECTIONVII">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_GEN_SECVII" type="NM_GEN_SECVII"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GEN_SEC_HYD">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ATTACHMENT_LIST" type="ATTACHMENT_LIST" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_GEN_HYDINST" type="NM_GEN_HYDINST"/>
+                  <xs:element name="NM_GEN_HYDNOTE" type="NM_GEN_HYDNOTE"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_GENERAL_SECTION_EXP">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_GEN_SECI" type="NM_GEN_SECI"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MONTH_CHART">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_CHART_NTC" type="NM_CHART_NTC"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MONTH_TORP">
+    <xs:sequence>
+      <xs:element name="NAME" type="NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_NUMBER" type="SECTION_NUMBER" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_CONTENT_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_CONTENT_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_TORP_NTC" type="NM_TORP_NTC"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_MONTH_PUBLICATION">
+    <xs:sequence>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PUBLISHED_FILENAME" type="PUBLISHED_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="XSLT_FILENAME" type="XSLT_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLISH_DATE" type="PUBLISH_DATE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NM_MONTH" type="NM_MONTH" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SECTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MONTH_CHART" type="NM_MONTH_CHART"/>
+                  <xs:element name="NM_MONTH_TORP" type="NM_MONTH_TORP"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_TANDP_PUBLICATION">
+    <xs:sequence>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PUBLISHED_FILENAME" type="PUBLISHED_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="XSLT_FILENAME" type="XSLT_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLISH_DATE" type="PUBLISH_DATE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MONTH_TORP" type="NM_MONTH_TORP"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NM_CUMULATIVE_PUBLICATION">
+    <xs:sequence>
+      <xs:element name="TITLE" type="TITLE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PUBLISHED_FILENAME" type="PUBLISHED_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="XSLT_FILENAME" type="XSLT_FILENAME" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBLISH_DATE" type="PUBLISH_DATE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EDITION" type="EDITION" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SECTION_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SECTION_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="NM_MONTH_CHART" type="NM_MONTH_CHART"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PPRCHT">
+    <xs:sequence>
+      <xs:element name="CHTNUM" type="CHTNUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="chprid" type="chprid" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NTCCNT" type="NTCCNT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="USRNAM" type="USRNAM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CTDATE" type="CTDATE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CHTYPE" type="CHTYPE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="INTNUM" type="INTNUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SEANUM" type="SEANUM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SAREA1" type="SAREA1" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SAREA2" type="SAREA2" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NREGN1" type="NREGN1" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NREGN2" type="NREGN2" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CTITL1" type="CTITL1" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CTITL2" type="CTITL2" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBCON" type="PUBCON" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PARCON" type="PARCON" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PUBDAT" type="PUBDAT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="EDNUMB" type="EDNUMB" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="EDDATE" type="EDDATE" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LTSTNM" type="LTSTNM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHTCOM" type="CHTCOM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PRODGRP" type="PRODGRP" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PRODTMPLT" type="PRODTMPLT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="chtlnk" type="chtlnk" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="chtsts" type="chtsts" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="TYPE_NAME" type="TYPE_NAME" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="VERSION" type="VERSION" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PRODUCT_STATUS" type="PRODUCT_STATUS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="USER_WRITE_ACCESS" type="USER_WRITE_ACCESS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="external" type="external" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CHART_SHEET_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CHART_SHEET_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRSHT" type="PPRSHT"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PPRSHT">
+    <xs:sequence>
+      <xs:element name="TSHEET" type="TSHEET" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PPSIZE" type="PPSIZE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PWIDTH" type="PWIDTH" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PHEIGH" type="PHEIGH" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="MARGNL" type="MARGNL" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="MARGNR" type="MARGNR" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="MARGNT" type="MARGNT" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="MARGNB" type="MARGNB" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="LAYOUT" type="LAYOUT" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SHEET1" type="SHEET1" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SHEET2" type="SHEET2" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CMMNTS" type="CMMNTS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SHEET_PANEL_LIST" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SHEET_PANEL_LIST_ITEM" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="PPRPAN" type="PPRPAN"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PPRPAN">
+    <xs:sequence>
+      <xs:element name="PANNAM" type="PANNAM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="GRTINT" type="GRTINT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANORD" type="PANORD" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="frcdsp" type="frcdsp" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANNUM" type="PANNUM" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PANPOS" type="PANPOS" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PSCALE" type="PSCALE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PANTYP" type="PANTYP" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PANTIT" type="PANTIT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PRONAM" type="PRONAM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SHFTNS" type="SHFTNS" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SHFTEW" type="SHFTEW" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PARUSD" type="PARUSD" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SRCHDT" type="SRCHDT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SRCHDP" type="SRCHDP" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DEPUNT" type="DEPUNT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DEPDAT" type="DEPDAT" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HGHTUN" type="HGHTUN" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="HGHTDA" type="HGHTDA" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="BDRTYP" type="BDRTYP" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SYMLIB" type="SYMLIB" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sdgfc" type="sdgfc" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sdgsz" type="sdgsz" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="presid" type="presid" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="annoid" type="annoid" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CRS" type="CRS" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PROFILE" type="PROFILE" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="sndrnd" type="sndrnd" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SCAFTR" type="SCAFTR" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="USGNAM" type="USGNAM" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sourceCRS_wkt" type="sourceCRS_wkt" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sourceCRS_description" type="sourceCRS_description" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sourceCRS_createdDate" type="sourceCRS_createdDate" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="BOUNDARY_MIN" type="BOUNDARY_MIN" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="BOUNDARY_MAX" type="BOUNDARY_MAX" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:element name="NM_FRONT_PAGE" type="NM_FRONT_PAGE"/>
+  <xs:element name="NM_GEN_SECI" type="NM_GEN_SECI"/>
+  <xs:element name="NM_MISC_SECTION" type="NM_MISC_SECTION"/>
+  <xs:element name="NM_MISC_INSTRUCT_ENC" type="NM_MISC_INSTRUCT_ENC"/>
+  <xs:element name="NM_MISC_INSTRUCT_PUB" type="NM_MISC_INSTRUCT_PUB"/>
+  <xs:element name="NM_MISC_INSTRUCT_PNCNCP" type="NM_MISC_INSTRUCT_PNCNCP"/>
+  <xs:element name="NM_MISC_INSTRUCT_PNCNEP" type="NM_MISC_INSTRUCT_PNCNEP"/>
+  <xs:element name="NM_MISC_INSTRUCT_PNCPW" type="NM_MISC_INSTRUCT_PNCPW"/>
+  <xs:element name="NM_MISC_INSTRUCT_PNCNCTBP" type="NM_MISC_INSTRUCT_PNCNCTBP"/>
+  <xs:element name="NM_MISC_INSTRUCT_PNCNETBP" type="NM_MISC_INSTRUCT_PNCNETBP"/>
+  <xs:element name="NM_PNC_PRD" type="NM_PNC_PRD"/>
+  <xs:element name="NM_PNC_PRD_TPUB" type="NM_PNC_PRD_TPUB"/>
+  <xs:element name="NM_BSB_PRD" type="NM_BSB_PRD"/>
+  <xs:element name="NM_ENC_PRD" type="NM_ENC_PRD"/>
+  <xs:element name="NM_ENC_PUB" type="NM_ENC_PUB"/>
+  <xs:element name="NM_ENCPW" type="NM_ENCPW"/>
+  <xs:element name="NM_MISC_INSTRUCT_ENCPW" type="NM_MISC_INSTRUCT_ENCPW"/>
+  <xs:element name="NM_SECTION_CAT_GROUP" type="NM_SECTION_CAT_GROUP"/>
+  <xs:element name="CAT_SUBSECTION" type="CAT_SUBSECTION"/>
+  <xs:element name="NM_PUB_PRD" type="NM_PUB_PRD"/>
+  <xs:element name="NM_PUB_NE" type="NM_PUB_NE"/>
+  <xs:element name="NM_PUB_CAN" type="NM_PUB_CAN"/>
+  <xs:element name="NM_PNC_PUB" type="NM_PNC_PUB"/>
+  <xs:element name="NM_PNC_TPUB" type="NM_PNC_TPUB"/>
+  <xs:element name="NM_PNC_NCTPUB" type="NM_PNC_NCTPUB"/>
+  <xs:element name="NM_PNC_NETPUB" type="NM_PNC_NETPUB"/>
+  <xs:element name="NM_PNC_NECPUB" type="NM_PNC_NECPUB"/>
+  <xs:element name="NM_PNC_NEPUB" type="NM_PNC_NEPUB"/>
+  <xs:element name="NM_PNC_CPW" type="NM_PNC_CPW"/>
+  <xs:element name="NM_MISC_INSTRUCT" type="NM_MISC_INSTRUCT"/>
+  <xs:element name="NM_CAT_SECTION" type="NM_CAT_SECTION"/>
+  <xs:element name="NM_CAT_ANTOM" type="NM_CAT_ANTOM"/>
+  <xs:element name="NM_CAT_SUB_ANTOM" type="NM_CAT_SUB_ANTOM"/>
+  <xs:element name="NM_CHART_CAT" type="NM_CHART_CAT"/>
+  <xs:element name="NM_CAT_SEC_CONT" type="NM_CAT_SEC_CONT"/>
+  <xs:element name="NM_CAT_INSTRUCTIONS" type="NM_CAT_INSTRUCTIONS"/>
+  <xs:element name="NM_SECTION_LIGHTLIST_PRODUCT" type="NM_SECTION_LIGHTLIST_PRODUCT"/>
+  <xs:element name="NM_LIGHT_LIST_UPDATE" type="NM_LIGHT_LIST_UPDATE"/>
+  <xs:element name="NM_GEN" type="NM_GEN"/>
+  <xs:element name="NM_GEN_SECIII" type="NM_GEN_SECIII"/>
+  <xs:element name="NM_GENERALINSTRUCT" type="NM_GENERALINSTRUCT"/>
+  <xs:element name="NM_GEN_SECIV" type="NM_GEN_SECIV"/>
+  <xs:element name="NM_GEN_SECVI" type="NM_GEN_SECVI"/>
+  <xs:element name="NM_GEN_SECVII" type="NM_GEN_SECVII"/>
+  <xs:element name="NM_GEN_HYDNOTE" type="NM_GEN_HYDNOTE"/>
+  <xs:element name="NTC_PUBLICATION" type="NTC_PUBLICATION"/>
+  <xs:element name="NM_GEN_HYDINST" type="NM_GEN_HYDINST"/>
+  <xs:element name="NM_CHARTS_LIST_RECORD" type="NM_CHARTS_LIST_RECORD"/>
+  <xs:element name="NTC_SECTION_NOTICE_GROUP" type="NTC_SECTION_NOTICE_GROUP"/>
+  <xs:element name="NM_SECTION_LIGHTLIST" type="NM_SECTION_LIGHTLIST"/>
+  <xs:element name="NM_CHART_SECTION" type="NM_CHART_SECTION"/>
+  <xs:element name="NM_TORP_INSTRUCT" type="NM_TORP_INSTRUCT"/>
+  <xs:element name="NM_CHART_NTC" type="NM_CHART_NTC"/>
+  <xs:element name="NM_TORP_NTC" type="NM_TORP_NTC"/>
+  <xs:element name="NM_CHARTINSTRUCT" type="NM_CHARTINSTRUCT"/>
+  <xs:element name="NM_LIST_CHART_RECORD" type="NM_LIST_CHART_RECORD"/>
+  <xs:element name="NM_SECTION_LIST_GROUP" type="NM_SECTION_LIST_GROUP"/>
+  <xs:element name="NM_LIGHTLIST" type="NM_LIGHTLIST"/>
+  <xs:element name="NM_NZ204_LOL_PUBLICATION" type="NM_NZ204_LOL_PUBLICATION"/>
+  <xs:element name="NM_NZ204_LIGHTLIST_GROUP" type="NM_NZ204_LIGHTLIST_GROUP"/>
+  <xs:element name="NM_LIGHT_LIST_RECORD" type="NM_LIGHT_LIST_RECORD"/>
+  <xs:element name="NM_LIGHT_LIST_INSTRUCT" type="NM_LIGHT_LIST_INSTRUCT"/>
+  <xs:element name="NM_EXTERNAL" type="NM_EXTERNAL"/>
+  <xs:element name="NM_NZ202_LIST_RECORD" type="NM_NZ202_LIST_RECORD"/>
+  <xs:element name="NM_NZ202_CATALOGUE_PUBLICATION" type="NM_NZ202_CATALOGUE_PUBLICATION"/>
+  <xs:element name="NM_NZ202_CATALOGUE_PRODUCT" type="NM_NZ202_CATALOGUE_PRODUCT"/>
+  <xs:element name="NM_CATALOGUE_LIST_RECORD" type="NM_CATALOGUE_LIST_RECORD"/>
+  <xs:element name="NM_NZ202_INSTRUCT" type="NM_NZ202_INSTRUCT"/>
+  <xs:element name="NM_GENERAL_SECTIONVI" type="NM_GENERAL_SECTIONVI"/>
+  <xs:element name="NM_GENERAL_SECTIONVII" type="NM_GENERAL_SECTIONVII"/>
+  <xs:element name="NM_GEN_SEC_HYD" type="NM_GEN_SEC_HYD"/>
+  <xs:element name="NM_GENERAL_SECTION_EXP" type="NM_GENERAL_SECTION_EXP"/>
+  <xs:element name="NM_MONTH_CHART" type="NM_MONTH_CHART"/>
+  <xs:element name="NM_MONTH_TORP" type="NM_MONTH_TORP"/>
+  <xs:element name="NM_MONTH_PUBLICATION" type="NM_MONTH_PUBLICATION"/>
+  <xs:element name="NM_TANDP_PUBLICATION" type="NM_TANDP_PUBLICATION"/>
+  <xs:element name="NM_CUMULATIVE_PUBLICATION" type="NM_CUMULATIVE_PUBLICATION"/>
+  <xs:element name="PPRCHT" type="PPRCHT"/>
+  <xs:element name="PPRSHT" type="PPRSHT"/>
+  <xs:element name="PPRPAN" type="PPRPAN"/>
+</xs:schema>

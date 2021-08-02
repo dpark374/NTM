@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NTC_PUBLICATION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" xsi:noNamespaceSchemaLocation="NTM-295.xsd">
+  <TITLE>NTM-295</TITLE>
+  <PUBLISHED_FILENAME>C:\IC\JOB6069\Sprint11\NTM-295\NTM-295.xml</PUBLISHED_FILENAME>
+  <SECTION_LIST>
+    <SECTION_LIST_ITEM>
+      <NM_MISC_SECTION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <SECTION_CONTENT_LIST>
+          <SECTION_CONTENT_LIST_ITEM>
+            <NM_ENC_PRD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <SECTION_CONTENT_LIST>
+                <SECTION_CONTENT_LIST_ITEM>
+                  <NM_ENC_PUB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <INSTRUCTION_LIST>
+                      <INSTRUCTION_LIST_ITEM>
+                        <NM_MISC_INSTRUCT_ENC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                          <ENC_NAME>NZ576252</ENC_NAME>
+                          <CHART_LIST>
+                            <CHART/>
+                          </CHART_LIST>
+                          <REGION>South Island</REGION>
+                          <SUB_REGION>West Coast</SUB_REGION>
+                          <VICINITY>Neck Cove and Deas Cove</VICINITY>
+                          <NZ_CHART_PUB>April 2021</NZ_CHART_PUB>
+                        </NM_MISC_INSTRUCT_ENC>
+                      </INSTRUCTION_LIST_ITEM>
+                    </INSTRUCTION_LIST>
+                  </NM_ENC_PUB>
+                </SECTION_CONTENT_LIST_ITEM>
+              </SECTION_CONTENT_LIST>
+            </NM_ENC_PRD>
+          </SECTION_CONTENT_LIST_ITEM>
+        </SECTION_CONTENT_LIST>
+      </NM_MISC_SECTION>
+    </SECTION_LIST_ITEM>
+  </SECTION_LIST>
+</NTC_PUBLICATION>
